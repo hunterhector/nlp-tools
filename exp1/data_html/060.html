@@ -1,0 +1,905 @@
+
+
+<script Language="JavaScript"><!--
+function isEnterKey(theForm,event,whereFrom)
+{
+	if(event.keyCode)
+	{
+		if (event.keyCode == 13)
+		{
+			theForm.action='mypage.asp';
+			theForm.submit();
+		}
+	}
+	else if(event.which) 
+	{
+		if (event.which == 13)
+		{
+			theForm.action='mypage.asp';
+			theForm.submit();
+		}
+	}
+}
+
+function Validate(theForm1,whereFrom)
+{
+	if (theForm1.strUserName.value == '' || theForm1.strPassword.value == '')
+	{
+		alert('You need to enter both the password and the username to login.');
+	}
+	else
+	{
+		theForm1.action = 'mypage.asp';
+		theForm1.submit();
+	}
+
+  return (false);
+}
+//--></script>
+<link href="http://babyfit.sparkpeople.com/style.css" rel="stylesheet" media="screen,print">
+<link href="http://babyfit.sparkpeople.com/style_member_pages2.css" rel="stylesheet" media="screen,print">
+<link href="http://babyfit.sparkpeople.com/style_print.css" rel="stylesheet" media="print">
+
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+<body>
+
+
+
+<html>
+<head>
+<title>Race Against Time</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<META name="verify-v1" content="QidBPg7zsDHvTtf15Qe8RaNS64meVIZ/r6XWhW7id1s=" /> 
+<script LANGUAGE="JavaScript" TYPE="text/javascript" src="http://babyfit.sparkpeople.com/rollovers.js" ></script>
+
+
+<script language="JavaScript1.2">
+<!-- //
+// BROWSER DETECTION
+
+
+function BrowserDetect() {
+   var ua = navigator.userAgent.toLowerCase(); 
+
+   // browser engine name
+   this.isGecko       = (ua.indexOf('gecko') != -1 && ua.indexOf('safari') == -1);
+   this.isAppleWebKit = (ua.indexOf('applewebkit') != -1);
+
+   // browser name
+   this.isKonqueror   = (ua.indexOf('konqueror') != -1); 
+   this.isSafari      = (ua.indexOf('safari') != - 1);
+   this.isOmniweb     = (ua.indexOf('omniweb') != - 1);
+   this.isOpera       = (ua.indexOf('opera') != -1); 
+   this.isIcab        = (ua.indexOf('icab') != -1); 
+   this.isAol         = (ua.indexOf('aol') != -1); 
+   this.isFireFox	  = (ua.indexOf('firefox') != -1);
+   this.isIE          = (ua.indexOf('msie') != -1 && !this.isOpera && (ua.indexOf('webtv') == -1) ); 
+   this.isMozilla     = (this.isGecko && ua.indexOf('gecko/') + 14 == ua.length);
+   this.isFirebird    = (ua.indexOf('firebird/') != -1);
+   this.isNS          = ( (this.isGecko) ? (ua.indexOf('netscape') != -1) : ( (ua.indexOf('mozilla') != -1) && !this.isOpera && !this.isSafari && (ua.indexOf('spoofer') == -1) && (ua.indexOf('compatible') == -1) && (ua.indexOf('webtv') == -1) && (ua.indexOf('hotjava') == -1) ) );
+   
+   // spoofing and compatible browsers
+   this.isIECompatible = ( (ua.indexOf('msie') != -1) && !this.isIE);
+   this.isNSCompatible = ( (ua.indexOf('mozilla') != -1) && !this.isNS && !this.isMozilla);
+   
+   // rendering engine versions
+   this.geckoVersion = ( (this.isGecko) ? ua.substring( (ua.lastIndexOf('gecko/') + 6), (ua.lastIndexOf('gecko/') + 14) ) : -1 );
+   this.equivalentMozilla = ( (this.isGecko) ? parseFloat( ua.substring( ua.indexOf('rv:') + 3 ) ) : -1 );
+   this.appleWebKitVersion = ( (this.isAppleWebKit) ? parseFloat( ua.substring( ua.indexOf('applewebkit/') + 12) ) : -1 );
+   
+   // browser version
+   this.versionMinor = parseFloat(navigator.appVersion); 
+   
+   // correct version number
+   if (this.isGecko && !this.isMozilla) {
+      this.versionMinor = parseFloat( ua.substring( ua.indexOf('/', ua.indexOf('gecko/') + 6) + 1 ) );
+   }
+   else if (this.isMozilla) {
+      this.versionMinor = parseFloat( ua.substring( ua.indexOf('rv:') + 3 ) );
+   }
+   else if (this.isIE && this.versionMinor >= 4) {
+      this.versionMinor = parseFloat( ua.substring( ua.indexOf('msie ') + 5 ) );
+   }
+   else if (this.isKonqueror) {
+      this.versionMinor = parseFloat( ua.substring( ua.indexOf('konqueror/') + 10 ) );
+   }
+   else if (this.isSafari) {
+      this.versionMinor = parseFloat( ua.substring( ua.lastIndexOf('safari/') + 7 ) );
+   }
+   else if (this.isOmniweb) {
+      this.versionMinor = parseFloat( ua.substring( ua.lastIndexOf('omniweb/') + 8 ) );
+   }
+   else if (this.isOpera) {
+      this.versionMinor = parseFloat( ua.substring( ua.indexOf('opera') + 6 ) );
+   }
+   else if (this.isIcab) {
+      this.versionMinor = parseFloat( ua.substring( ua.indexOf('icab') + 5 ) );
+   }
+   
+   this.versionMajor = parseInt(this.versionMinor); 
+   
+   // dom support
+   this.isDOM1 = (document.getElementById);
+   this.isDOM2Event = (document.addEventListener && document.removeEventListener);
+   
+   // css compatibility mode
+   this.mode = document.compatMode ? document.compatMode : 'BackCompat';
+
+   // platform
+   this.isWin    = (ua.indexOf('win') != -1);
+   this.isWin32  = (this.isWin && ( ua.indexOf('95') != -1 || ua.indexOf('98') != -1 || ua.indexOf('nt') != -1 || ua.indexOf('win32') != -1 || ua.indexOf('32bit') != -1 || ua.indexOf('xp') != -1) );
+   this.isMac    = (ua.indexOf('mac') != -1);
+   this.isUnix   = (ua.indexOf('unix') != -1 || ua.indexOf('sunos') != -1 || ua.indexOf('bsd') != -1 || ua.indexOf('x11') != -1)
+   this.isLinux  = (ua.indexOf('linux') != -1);
+   
+   // specific browser shortcuts
+   this.isNS4x = (this.isNS && this.versionMajor == 4);
+   this.isNS40x = (this.isNS4x && this.versionMinor < 4.5);
+   this.isNS47x = (this.isNS4x && this.versionMinor >= 4.7);
+   this.isNS4up = (this.isNS && this.versionMinor >= 4);
+   this.isNS6x = (this.isNS && this.versionMajor == 6);
+   this.isNS6up = (this.isNS && this.versionMajor >= 6);
+   this.isNS7x = (this.isNS && this.versionMajor == 7);
+   this.isNS7up = (this.isNS && this.versionMajor >= 7);
+   
+   this.isIE4x = (this.isIE && this.versionMajor == 4);
+   this.isIE4up = (this.isIE && this.versionMajor >= 4);
+   this.isIE5x = (this.isIE && this.versionMajor == 5);
+   this.isIE55 = (this.isIE && this.versionMinor == 5.5);
+   this.isIE5up = (this.isIE && this.versionMajor >= 5);
+   this.isIE6x = (this.isIE && this.versionMajor == 6);
+   this.isIE6up = (this.isIE && this.versionMajor >= 6);
+   
+   this.isIE4xMac = (this.isIE4x && this.isMac);
+}
+var browser = new BrowserDetect();
+
+// END BROWSER DETECTION
+// LOAD IMAGES FOR LEFT NAV
+
+	if (document.images) {
+		arrow_up=new Image(); arrow_up.src="http://babyfit.sparkpeople.com/images/nav_plus.gif" ;
+		arrow_up_selected=new Image(); arrow_up_selected.src="http://babyfit.sparkpeople.com/images/nav_plus_selected.gif" ;
+		arrow_down=new Image(); arrow_down.src="http://babyfit.sparkpeople.com/images/nav_minus.gif" ;
+		arrow_down_selected=new Image(); arrow_down_selected.src="http://babyfit.sparkpeople.com/images/nav_minus_selected.gif" ;
+	}
+
+
+// DHTML MENU FOR LEFT NAV
+
+function toggle(item,state)
+{
+	if (browser.isNS6x == true || browser.isNS4x == true) 
+	{
+
+		// does not support dhtml
+		//Doesn't go to the right place so comment out
+		//top.location.href = "/" + item + "/";
+		top.location.href = "#"
+
+	} 
+	else 
+	{
+		// toggle menu for IE
+		if (browser.isIE)
+		{
+			menu = eval(item + "Menu");
+			if (menu.style.display == "none")
+			{
+				//eval(item + 'Menu' + '.style.display = "block"');
+				menu.style.display = "block";
+			}
+			else
+			{	
+				menu.style.display = "none";
+			}
+		}
+		else
+		{
+			if (document.getElementById(item + "Menu").style.display == "none" || document.getElementById(item + "Menu").style.display == null)
+			{
+				document.getElementById(item + "Menu").style.display = "block";
+			}
+			else
+			{
+				document.getElementById(item + "Menu").style.display = "none";
+			}
+		}
+		
+		// toggle arrow for IE
+		if (state == "selected") 
+		{
+			state = "_selected";
+		}
+
+		if (browser.isIE)
+		{
+			if (menu.style.display == "none") 
+			{
+					document.images[item].src = eval("arrow_up" + state + ".src");
+			} 
+			else 
+			{
+					document.images[item].src = eval("arrow_down" + state + ".src");
+			}
+		}
+		else
+		{
+			if (document.getElementById(item + "Menu").style.display == "none" || document.getElementById(item + "Menu").style.display == null)
+			{
+					document.images[item].src = eval("arrow_up" + state + ".src");
+			}
+			else
+			{
+					document.images[item].src = eval("arrow_down" + state + ".src");
+			}
+		}
+	}
+}
+
+// STYLE SHEET FOR LEFT NAV
+
+document.write("<style type='text/css'>");
+if (browser.isNS6x == true || browser.isNS4x == true) {
+	document.write(".nav_2nd_level_menu {display:block;}");
+	document.write(".nav_3rd_level_menu {display:none;}");
+	document.write(".nav_3rd_level_menu_selected {display:block;}");
+	document.write(".nomenu { display:block;}")
+	
+} else {
+	document.write(".nav_3rd_level_menu {display:none; }")
+}
+document.write("<" + "/style>");
+
+// NETSCAPE DISPLAY FUNCTIONS
+
+function getindex(m) {
+if (browser.isIE != true) {
+		ind = null;
+		for (i=0; i<document.layers.length; i++) {
+			menu = document.layers[i];
+			alert("here");
+			alert(document.layers[i]);
+			if (menu.id == m) {
+				ind = i;
+				break;
+			}
+		}
+		return ind;
+	}
+}
+function display() {
+if (browser.isIE != true) {
+		nextmenu = document.layers[firstindex].pageY + document.layers[firstindex].document.height;
+		for (i=firstindex+1; i<document.layers.length; i++) {
+			menu = document.layers[i];
+			if (menu.display != "none") {
+				menu.pageY = nextmenu;
+				nextmenu += menu.document.height;
+			}
+		}
+	}
+}
+
+// INITIALIZE MENUS
+
+function initmenus(){
+if (browser.isIE != true) {
+		firstm = "startToggle";
+		//firstindex = getindex(firstm);
+		//display();
+
+} else {
+		divs = document.all.tags("div");
+		for (i=0; i<divs.length; i++) {
+			menu = divs(i);
+			if (menu.className == "nav_3rd_level_menu") {menu.style.display = "none"};
+		}
+	}
+}
+
+function ValidateSiteSearch()
+{
+	var theForm = document.theSiteSearchForm
+	if (theForm.SearchTerm.value == '')
+	{
+		alert('Please enter your search term.');
+		theForm.SearchTerm.focus();
+		return (false);
+	}
+	if (theForm.SiteSearchType[0].checked)
+	{
+		theForm.target = '_self';
+		theForm.submit();
+		return (false);	
+	}
+	else if (theForm.SiteSearchType[1].checked)
+	{
+		window.open('http://www.google.com/search?hl=en&q=' + theForm.SearchTerm.value.replace(' ','+'),'','width=800,height=600,toolbar=yes,location=yes,directories=yes,status=yes,menubar=yes,scrollbars=yes,copyhistory=yes,resizable=yes,left=200,top=200,screenX=200,screenY=200');
+		return (false);	
+	}
+	
+}
+
+// -->
+</script>
+<link href="http://babyfit.sparkpeople.com/print.css" rel="stylesheet" media="print">
+
+	<style>
+	.nav_bg_image_float { background: url(images/nav_pic_bg4.jpg) no-repeat; background-position:right;}
+	</style>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" bgcolor="#F5F5FE" >
+
+		<style type="text/css">
+		#RegLogCallOutBar {
+			font: message-box;
+		}
+
+		#RegLogCallOutBar a, #RegLogCallOutBar a:link, #RegLogCallOutBar a:visited, #RegLogCallOutBar a:active {
+			display: block;
+			color: #000;
+			width:100%;
+			background: #FFFFE1 no-repeat fixed .3em .3em;
+			border-bottom: .16em outset;
+			text-decoration: none;
+			cursor: default;
+		}
+
+		#RegLogCallOutBar a:hover {
+			color: #FFF;
+			background: #3169B6 no-repeat fixed .3em .3em;
+		}
+
+		#RegLogCallOutBar p{
+			margin:0px;
+			padding: .45em 0em .45em 22px;
+			font-size:11px;
+			font-family:Arial, verdana, sans-serif;
+		}
+		</style>
+<div id="RegLogCallOutBar"><a href="http://babyfit.sparkpeople.com/register.asp?from=browser_bar" ><p>It appears you have not yet registered for BabyFit. To get a free nutrition and fitness plan and join our community click here....</p></a></div>
+<!---MEMBER PAGES CONTENT ------->
+
+<table class="hide" border="0" cellspacing="0" cellpadding="0">
+		 
+		 <tr>
+         <td width="770" height="98" align="center" class="member_nav_top">
+		
+	<!-- begin DFP ad tag -->
+	<script language="JavaScript" src="http://ad.doubleclick.net/adj/bf.babypages/default;sz=728x90;tile=1;pos=tc;u=bf;dcopt=ist;ord=828200852318?" type="text/javascript"></script>
+	<noscript><a href="http://ad.doubleclick.net/jump/bf.babypages/default;sz=728x90;tile=1;pos=tc;u=bf;dcopt=ist;ord=828200852318?" target="_blank"><img src="http://ad.doubleclick.net/ad/bf.babypages/default;sz=728x90;tile=1;pos=tc;u=bf;dcopt=ist;ord=828200852318?" width="728" height="90" border="0" alt=""></a></noscript>
+	<!-- end ad tag -->
+	
+		</td>
+		</tr>
+		
+            <tr>
+              <td align="center" width="770">
+			  <table width="100%" bgcolor="white" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td background="images/phm_bg2.jpg">
+					<table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <td width="355"><script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script type="text/javascript">
+_uacct = "UA-89402-1";
+urchinTracker();
+_uff=0;
+_uacct = "UA-89402-3";
+urchinTracker();
+</script>&nbsp;&nbsp;&nbsp;<span style="font:16px Arial, Verdana, sans-serif; color:#A485B3;"><b>PCOS22's</b> Page</span><BR>&nbsp;&nbsp;&nbsp;<span style="font:11px Arial, Verdana, sans-serif; color:black;">my.babyfit.com/PCOS22</style></td>
+                    
+                          <td width="340" valign="middle">
+						  
+						  <table border="0" cellspacing="0" cellpadding="0">
+                              <FORM name="theSiteSearchForm" method="post" action="search-results.asp"><tr>
+                                <td class="nav_search">search:&nbsp;</td>
+                                <td><input name="SiteSearchType" type="radio" value="BF" checked></td>
+                                <td class="nav_search_gray">BabyFit</td>
+                                <td><img src="http://babyfit.sparkpeople.com/spacer.gif" alt="" height="20" width="5" border="0"></td>
+                                <td><input name="SiteSearchType" type="radio" value="WEB"></td>
+                                <td class="nav_search_gray">Web</td>
+								<td width="5">&nbsp;</td>
+                                  <td><input type="text" name="SearchTerm" size="18" style="font:10px Arial, Verdana; width:100px;" value=""></td>
+                                  <td><a href="javascript:void(0);" onclick="javascript: return ValidateSiteSearch();" onMouseOut="MM_swapImgRestore()"  onMouseOver="MM_swapImage('nav_search','','/images/nav_search_btn_f2.gif',1);" ><img src="http://babyfit.sparkpeople.com/images/nav_search_btn.gif" alt="Search" name="nav_search" hspace="8" border="0"></a></td>
+                                </tr></form>
+                            </table>
+						  </td>
+						
+					<td width="180" valign="middle" align="center"><a href="http://babyfit.sparkpeople.com/default.asp" >
+						<img src="http://babyfit.sparkpeople.com/images/phm_mybabyfit2.gif" alt="BabyFit.com : Healthy Babies Start With Healthy Moms" border="0"></a>
+						  </td>
+                        </tr>
+                    </table></td>
+					
+                  </tr>
+                </table>
+                  
+				  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td valign="bottom" align="left" background="images/phm_1st_level_bg2.jpg" height="24" >
+					  <table border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td><img src="http://babyfit.sparkpeople.com/images/phm_1st_level_bg2.jpg" width="26" height="21" border="0"></td>
+                            
+								<td class="nav_1st_level">
+								
+									<a href="http://babyfit.sparkpeople.com/homepage.asp" >My Home</a></td>
+								   
+								<td><img src="http://babyfit.sparkpeople.com/images/spacer.gif" width="24" height="21" border="0"></td>
+								
+								<td class="nav_1st_level">
+								
+									<a href="http://babyfit.sparkpeople.com/pregnancy-resource-center.asp" >Resource Center</a></td>
+								   
+								<td><img src="http://babyfit.sparkpeople.com/images/spacer.gif" width="24" height="21" border="0"></td>
+								
+								<td class="nav_1st_level">
+								
+									<a href="http://babyfit.sparkpeople.com/messageboard.asp" >Community</a></td>
+								   
+								<td><img src="http://babyfit.sparkpeople.com/images/spacer.gif" width="24" height="21" border="0"></td>
+								
+								<td class="nav_1st_level">
+								
+									<a href="http://babyfit.sparkpeople.com/mommyteams.asp" >MommyTeams</a></td>
+								   
+								<td><img src="http://babyfit.sparkpeople.com/images/spacer.gif" width="24" height="21" border="0"></td>
+								
+									<td><img src="http://babyfit.sparkpeople.com/images/phm_1st_level_crn12.jpg" width="12" height="21" border="0"></td>
+								
+								<td class="nav_1st_level_selected">
+								
+									<a href="http://babyfit.sparkpeople.com/mypage_home.asp" >BabyPages</a></td>
+								   
+									<td><img src="http://babyfit.sparkpeople.com/images/phm_1st_level_crn22.jpg" width="12" height="21" border="0"></td>
+								
+								<td><img src="http://babyfit.sparkpeople.com/images/spacer.gif" width="24" height="21" border="0"></td>
+								
+
+                          </tr>
+                      </table>
+					  
+					  </td>
+				    </tr>
+			 </table></td>
+	   </tr>
+</table>
+
+
+  <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="770" valign="top" bgcolor="#FFFFFF" background="images/phm_page_bg2.jpg">	
+	      
+	 
+	 	  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="http://babyfit.sparkpeople.com/images/phm_tab_head2.gif" border="0" width="770" height="23"></td>
+        </tr>
+      </table>
+	 
+	  <table width="770" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="12" align="center" valign="top">&nbsp;</td>
+              <td width="254" align="center" valign="top">
+                
+                <table width="254" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+				  <td align="center" valign="bottom"><img src="http://babyfit.sparkpeople.com/images/phm_photo_frame_top2.gif" border="0"></td>
+				  </tr>
+				  <tr>
+                    <td align="center" valign="middle" bgcolor="#F5F5FE" class="member_caption">
+					
+					<a href="javascript: void(0);" onClick="window.open('mypage_photo_gallery_enlarge.asp?id=366527','','width=610,height=500,resizable=yes,scrollbars=yes,menubar=no,toolbar=no,directories=no,location=no,status=yes');"><img src="http://photos-ak.babyfit.com/4/6/l467579895.jpg" border="0" width="250" height="187.5"></a>
+                    <br>ME <br>
+					
+					<br>
+					</td>
+				  </tr>
+					<tr>
+					<td align="center" valign="top"><img src="http://babyfit.sparkpeople.com/images/phm_photo_frame_btm2.gif" border="0"></td>
+                  </tr>
+                </table>
+              <br> <table width="254"  border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+				  <td align="center" valign="bottom"><img src="http://babyfit.sparkpeople.com/images/phm_photo_frame_top2.gif" border="0"></td>
+				  </tr>
+				  <tr>
+                    <td align="center" valign="middle" bgcolor="#F5F5FE" class="member_caption">
+					
+					<img src="http://babyfit.sparkpeople.com/images/phm_no_photo_browse.jpg" border="0">
+					
+					</td>
+				</tr>
+					<tr>
+					<td align="center" valign="top"><img src="http://babyfit.sparkpeople.com/images/phm_photo_frame_btm2.gif" border="0"></td>
+                  </tr>
+                </table>
+              <br>
+              <table width="254"  border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td align="center" valign="bottom"><img src="http://babyfit.sparkpeople.com/images/phm_photo_frame_top2.gif" border="0"></td>
+                </tr>
+                <tr>
+                    <td align="center" valign="middle" bgcolor="#F5F5FE" class="member_caption">
+					
+					<img src="http://babyfit.sparkpeople.com/images/phm_no_photo_browse.jpg" border="0">
+					
+					</td>
+                </tr>
+                <tr>
+                  <td align="center" valign="top"><img src="http://babyfit.sparkpeople.com/images/phm_photo_frame_btm2.gif" border="0"></td>
+                </tr>
+              </table></td>
+            <td width="12" align="left" valign="top">&nbsp;</td>
+                    <td width="300" align="left" valign="top">
+				     <!------------------Start Column ONE ----->
+				   <br>
+                      <span class="member_headtitle">Race Against Time</span><br><br>
+                       Struggling with PCOS in attempt to get pregnant before I lose the use of my ovaries.  So far, have gone through three long years of trying. 
+ 
+Live in Statesville, NC with the love of my life. 
+                   	 
+                   	 
+                   	 
+                   	 
+                   	 
+                   	    <BR>
+                        <br>
+						<div width="100%"><img src="http://babyfit.sparkpeople.com/images/phm_line2.gif" border="0" alt=""></div>
+						<br>
+                 		<span class="member_title">PCOS22's Recent Journal Entries: </span><br><br>
+						
+                        <div id="member_journal">
+						<ul class="links">
+						
+						<li><a href="http://babyfit.sparkpeople.com/mypage_public_journal_individual.asp?blog_id=255799" >Screaming and Crying!</a> - 3/31/2008</li>
+						
+						<li><a href="http://babyfit.sparkpeople.com/mypage_public_journal_individual.asp?blog_id=254020" >Yet Another Failure</a> - 3/17/2008</li>
+						
+						<li><a href="http://babyfit.sparkpeople.com/mypage_public_journal_individual.asp?blog_id=252132" >Ovulated!</a> - 3/4/2008</li>
+						
+						<li><a href="http://babyfit.sparkpeople.com/mypage_public_journal_individual.asp?blog_id=251465" >Crossing Fingers</a> - 2/28/2008</li>
+						
+						</ul>
+                        <a href="http://babyfit.sparkpeople.com/mypage_public_journal.asp?id=PCOS22" class="member_links">See All Journal Entries</a>
+						
+						</div>
+					      <br>
+						<div width="100%"><img src="http://babyfit.sparkpeople.com/images/phm_line2.gif" border="0" alt=""></div>
+						<br>
+                    <span class="member_title">Links to PCOS22's Friends Pages: </span><br>
+                      <br>                      
+						
+						<BR>
+						<BR>
+						This user doesn't have any links to friends.
+						<BR><BR>
+						<BR>
+						<BR>
+						
+						<div width="100%"><img src="http://babyfit.sparkpeople.com/images/phm_line2.gif" border="0" alt=""></div>
+                      <br>
+                     <!-- <a href="http://babyfit.sparkpeople.com/mypage_friends.asp" class="member_links">See All Of PCOS22's Friends </a> <br>
+                      <br>-->
+						<br><br>
+
+						<!-- display users mommyteams -->
+						<div class="member_title">PCOS22's MommyTeams:</div>
+						
+						<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+							<tr>
+						
+                          <td align="center" valign="middle" width="33%"><br>
+                              <a href="http://babyfit.sparkpeople.com/mommyteams_individual.asp?gid=28" target="_blank">TTC First Child</a><Br>
+							  <a href="http://babyfit.sparkpeople.com/mommyteams_individual.asp?gid=28" target="_blank"><img src="http://photos.babyfit.com/1/1/117971449.jpg" border="0" width="90" height="103.125"></a><br>
+                          </td>
+						
+                          <td align="center" valign="middle" width="33%"><br>
+                              <a href="http://babyfit.sparkpeople.com/mommyteams_individual.asp?gid=53" target="_blank">Big, Beautiful Mommies</a><Br>
+							  <a href="http://babyfit.sparkpeople.com/mommyteams_individual.asp?gid=53" target="_blank"><img src="http://babyfit.sparkpeople.com/images/phm_no_team_icon.jpg" width="80" height="102" border="0"></a><br>
+                          </td>
+						
+                          <td align="center" valign="middle" width="33%"><br>
+                              <a href="http://babyfit.sparkpeople.com/mommyteams_individual.asp?gid=195" target="_blank">PCOS (polycystic ovarian syndrome)</a><Br>
+							  <a href="http://babyfit.sparkpeople.com/mommyteams_individual.asp?gid=195" target="_blank"><img src="http://babyfit.sparkpeople.com/images/phm_no_team_icon.jpg" width="80" height="102" border="0"></a><br>
+                          </td>
+						
+							</tr>
+							<tr>
+								
+                          <td align="center" valign="middle" width="33%"><br>
+                              <a href="http://babyfit.sparkpeople.com/mommyteams_individual.asp?gid=671" target="_blank">TTC and Plus Size</a><Br>
+							  <a href="http://babyfit.sparkpeople.com/mommyteams_individual.asp?gid=671" target="_blank"><img src="http://babyfit.sparkpeople.com/images/phm_no_team_icon.jpg" width="80" height="102" border="0"></a><br>
+                          </td>
+						
+								<td width="33%">&nbsp;</td>
+							
+								<td width="33%">&nbsp;</td>
+							
+						</tr>
+                      </table><br><br>
+						
+						<div width="100%"><img src="http://babyfit.sparkpeople.com/images/phm_line2.gif" border="0" alt=""></div><br><br>
+						<!-- end display users mommyteams -->
+
+
+                    
+				  
+	<!-- begin DFP ad tag -->
+	<script language="JavaScript" src="http://ad.doubleclick.net/adj/bf.babypages/default;sz=300x250;tile=1;pos=tr;u=bf;ord=828200852318?" type="text/javascript"></script>
+	<noscript><a href="http://ad.doubleclick.net/jump/bf.babypages/default;sz=300x250;tile=1;pos=tr;u=bf;ord=828200852318?" target="_blank"><img src="http://ad.doubleclick.net/ad/bf.babypages/default;sz=300x250;tile=1;pos=tr;u=bf;ord=828200852318?" width="300" height="250" border="0" alt=""></a></noscript>
+	<!-- end ad tag -->
+	
+					<!--- END COLUMN ONE---->
+	    </td>
+                    <td width="12" align="left" valign="top">&nbsp;</td>
+                    <td width="180" align="left" valign="top">
+				      <!------------------Start Column TWO ----->
+					
+<style>
+.user_pass{COLOR: #D9FDE4; FONT: 11px arial, helvetica, sans-serif; font-weight:bold; }
+.forgot_pass A{ COLOR: white; FONT: 10px arial, helvetica, sans-serif; font-weight:bold; TEXT-DECORATION: underline;} 
+.forgot_pass A:hover { COLOR: #d9fde4; FONT: 10px arial, helvetica, sans-serif; font-weight:bold; TEXT-DECORATION: underline; }
+.mypage_login_sidebar {background: url(images/mph_login_sidebar_bg.gif) no-repeat;}
+</style>
+
+<table border="0" cellpadding="0" cellspacing="0" width="164">
+<tr><td align="right">
+<a href="http://babyfit.sparkpeople.com/mommymail_send_message.asp?txtTo=PCOS22&bReturnSP=TRUE" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('phm_send_mommymail','','/images/spg_private_message_f2.gif',1);" ><img name="phm_send_mommymail" src="http://babyfit.sparkpeople.com/images/spg_private_message.gif" border="0"></a><br></td></tr></table>
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td align="right">
+<br>
+<a href="http://babyfit.sparkpeople.com/mypage_directory.asp" onMouseOut="MM_swapImgRestore()"  onMouseOver="MM_swapImage('phm_directory','','/images/phm_directory1_f2.gif',1);" ><img name="phm_directory" src="http://babyfit.sparkpeople.com/images/phm_directory1.gif" border="0"></a><br>
+<div id="small_br"><br></div>
+
+<a href="http://babyfit.sparkpeople.com/mypage_edit.asp" onMouseOut="MM_swapImgRestore()"  onMouseOver="MM_swapImage('phm_edit','','/images/phm_edit1_f2.gif',1);" ><img name="phm_edit" src="http://babyfit.sparkpeople.com/images/phm_edit1.gif" border="0"></a><br>
+<div id="small_br"><br></div>
+
+<a href="http://babyfit.sparkpeople.com/mypage_email_friends.asp?page=mypage.asp?id=PCOS22" onMouseOut="MM_swapImgRestore()"  onMouseOver="MM_swapImage('phm_email','','/images/phm_email1_f2.gif',1);" ><img name="phm_email" src="http://babyfit.sparkpeople.com/images/phm_email1.gif" border="0"></a><br>
+<div id="small_br"><br></div>
+
+<a href="http://babyfit.sparkpeople.com/mypage_create.asp" onMouseOut="MM_swapImgRestore()"  onMouseOver="MM_swapImage('phm_create','','/images/phm_create1_f2.gif',1);" ><img name="phm_create" src="http://babyfit.sparkpeople.com/images/phm_create1.gif" border="0"></a><br>
+<div id="small_br"><br></div>
+
+<a href="http://babyfit.sparkpeople.com/loginpage.asp?wherefrom=mypage_add_asfriend.asp?txtSearch=PCOS22" onMouseOut="MM_swapImgRestore()"  onMouseOver="MM_swapImage('phm_add_friends','','/images/phm_add_friends1_f2.gif',1);" ><img name="phm_add_friends" src="http://babyfit.sparkpeople.com/images/phm_add_friends1.gif" border="0"></a><br>
+<div id="small_br"><br></div>	
+
+<a href="http://babyfit.sparkpeople.com/mypage_photo_gallery.asp?id=PCOS22" onMouseOut="MM_swapImgRestore()"  onMouseOver="MM_swapImage('phm_photo_gallery','','/images/phm_photo_gallery1_f2.jpg',1);" ><img name="phm_photo_gallery" src="http://babyfit.sparkpeople.com/images/phm_photo_gallery1.jpg" border="0"></a><br>
+
+<center><span class="member_title" style="font-size:11px;">1 picture&nbsp;&nbsp;1 album</span></center>
+<br>
+
+<a href="http://babyfit.sparkpeople.com/mypage_subscribe.asp?bp_id=59587" onMouseOut="MM_swapImgRestore()"  onMouseOver="MM_swapImage('phm_subscribe','','/images/phm_subscribe_f2.gif',1);"><img name="phm_subscribe" src="http://babyfit.sparkpeople.com/images/phm_subscribe.gif" border="0"></a><br>
+<br>
+		
+
+</td>
+<td width="12">&nbsp;</td>
+</tr>
+</table>
+				      <table border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="168" class="black11"><br>
+					
+				    <span class="member_title">PCOS22's Profile:</span><br>
+				    <br>
+						
+					<span class="member_profile">My Pregnancy</span> 
+					<br>
+					TTC for 3 years w/ PCOS<br>					<br>
+						
+					<span class="member_profile">Personal Information</span>  <br>
+					Amanda Lentz<BR>
+Statesville, NC<BR>
+alentz@wfubmc.edu<BR>
+<br>
+					<br>
+						
+					<span class="member_profile">Other Information</span><br>
+					"If the struggles of life only make you stronger...than I am Superman."<br>
+					<br>
+					
+					<br>
+                    </td>
+					<td width="12">&nbsp;</td>
+                      </tr>
+                    </table>
+				    </td>
+          </tr>
+        </table>
+		<br>
+		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+					<td width="12">&nbsp;</td>
+					<td valign="top">
+					
+
+<!---ticker inactive--->
+	
+	<br><br>
+					
+					
+					  <table width="100%" border="0" cellspacing="4" cellpadding="0">
+		  <tr>
+		  <td>
+		  <span class="member_title" align="left"><a name="comments">Member Comments:</a></span>
+</td>
+
+  <td>
+	
+			<a href="http://babyfit.sparkpeople.com/loginpage.asp?whereFrom=%2Fmypage%2Easp%3Fid%3DPCOS22%23comments" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('phm_add_comments','','/images/phm_add_comments_login_f2.gif',1);"><img src="http://babyfit.sparkpeople.com/images/phm_add_comments_login.gif" name="phm_add_comments" align="right" border="0"></a>
+			
+  </td>
+  </tr>
+
+
+					
+								<tr>
+									<td class="member_comments1_white" valign="top" width="30%">
+									<img src="http://photos-ak.babyfit.com/6/4/643082893.jpg" border="0" align="right"></a>
+
+									<span class="member_comments_user">GRAYDON944</span><br>
+									<span class="black10">3/16/2008 4:28:11 PM&nbsp;</span>
+									<br><a href="http://babyfit.sparkpeople.com/mypage.asp?id=GRAYDON944" target="_blank" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('mb_my_babypage0','','/images/phm_my_babypage_f2.gif',1);"><img src="http://babyfit.sparkpeople.com/images/phm_my_babypage.gif" name="mb_my_babypage0" border="0" vspace="6"></a>
+									<td class="member_comments1_white" valign="top">Why do you think you will lose the use of your ovaries so soon?  Is that what the OB told you due to the PCOS or some other reason?  I ask because I have had PCOS for many many years, but had my first child at 32(after trying for 8 yrs.) and am pregnant again at 35, both times without any help.  I did lose about 15 lbs. just before each pregnancy, which may have helped me to ovulate.  We were told we would probably NEVER have children, and here I am pregnant with #2, but maybe God knew we should wait and have them later.  Who knows, but I just don't want you to give up too soon.  Good luck, and Best Wishes!!!
+									<!---<br><br><a href="javascript:void(0)" onclick="Javascript:return DeleteComment(document.theForm,90830);" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('delete_c','','/images/phm_delete_comment_f2.gif',1);"><img src="http://babyfit.sparkpeople.com/images/phm_delete_comment.gif" name="delete_c" border="0"></a><br>--->
+									
+									</td>
+								</tr>
+								
+</table>
+
+<br>
+<div align="right"><a href="mailto:tanya@babyfit.com?subject=PCOS22 may have an inappropriate BabyPage&body=The page http://my.babyfit.com/PCOS22 may be inappropriate" class="member_links">Report Inappropriate Page</a></div>
+					</td>
+					<td width="12">&nbsp;</td>
+					</tr>
+					</table>
+					
+  
+	
+<table class="hide" border="0" cellspacing="0" cellpadding="0" width="100%">
+		<tr>
+		  <td class="mouseOverFooter" align="center">
+		  <div align="center">
+<br>
+
+	<!-- begin DFP ad tag -->
+	<script language="JavaScript" src="http://ad.doubleclick.net/adj/bf.babypages/default;sz=728x90;tile=1;pos=bc;u=bf;ord=828200852318?" type="text/javascript"></script>
+	<noscript><a href="http://ad.doubleclick.net/jump/bf.babypages/default;sz=728x90;tile=1;pos=bc;u=bf;ord=828200852318?" target="_blank"><img src="http://ad.doubleclick.net/ad/bf.babypages/default;sz=728x90;tile=1;pos=bc;u=bf;ord=828200852318?" width="728" height="90" border="0" alt=""></a></noscript>
+	<!-- end ad tag -->
+	
+<br><br>
+	<a href="http://babyfit.sparkpeople.com/pregnancy-resource-center.asp" >Pregnancy Resources </a> | <a href="http://babyfit.sparkpeople.com/pregnancy-questions.asp" >Pregnancy Articles</a> | <a href="http://babyfit.sparkpeople.com/pregnancy-exercise.asp" >Pregnancy Exercises </a> | 
+	
+		<a href="http://babyfit.sparkpeople.com/archive_forums.asp" target="_self">Pregnancy Message Boards</a>
+	
+	|  <a href="http://babyfit.sparkpeople.com/baby-names.asp" target="_self">Baby Names </a>
+	|  <a href="http://babyfit.sparkpeople.com/help.asp" target="_self">Help</a>
+	|  <a href="http://www.printmojo.com/BabyFit/" target="_self">BabyFit Shirts</a><br>
+		<br>
+
+
+
+		<span class="black10">
+	&copy;  1999-2008 SparkPeople, All Rights Reserved |</span> <a href="http://babyfit.sparkpeople.com/articles.asp?id=777" >Terms and Conditions</a> | <a href="http://babyfit.sparkpeople.com/articles.asp?id=776" >Privacy Policy </a><br>
+	<br><b>NOTE: Terms and Conditions and Privacy Policy update on September 5, 2007</b>
+	<br>
+BabyFit is a SparkPeople Company<br>
+	<a href="http://www.sparkpeople.com" target="_blank"><img src="http://babyfit.sparkpeople.com/images/footer_sp_logo.gif" alt="SparkPeople" vspace="4" border="0"></a><br>
+	Visit SparkPeople for <a href="http://www.sparkpeople.com" class="mouseOverFooterU" target="_blank">Free Online Diet Plan</a>
+	<br>
+	Tell your company about SparkPeople&nbsp;<a href="http://www.sparkpeople.com/employeehealth/home.asp" class="mouseOverFooterU" target="_blank">Corporate Wellness</a><br>
+	
+    <br>
+BabyFit, BabyPoints, BabyPages and other marks are trademarks of SparkPeople, Inc.  All Rights Reserved.<br>
+BABYFIT is a registered trademark of SparkPeople, Inc. in the United States, European Union, Canada, and Australia.  All rights reserved.</span>
+    <br><br>	</div>
+<SCRIPT LANGUAGE="JavaScript1.2"><!-- //
+initmenus();
+// -->
+</SCRIPT>
+</td>
+	</tr></table></td>
+	
+	  <td width="20" valign="top"><img src="http://babyfit.sparkpeople.com/spacer.gif" alt="" height="1" width="5" border="0"></td>
+      <td valign="top">
+<a href="http://babyfit.sparkpeople.com/healthy-relationships.asp"><img src="http://babyfit.sparkpeople.com/images/inc_today_relationship.gif" border="0"></a>
+
+<table class="hide" width="206" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center"><a href="http://babyfit.sparkpeople.com/mypage_create.asp" ><img src="http://babyfit.sparkpeople.com/images/phm_today1.jpg" alt="Free Personal Homepage!" border="0" vspace="6"></a></td>
+  </tr>
+  <tr>
+    <td align="center"><table width="90%"  border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>
+		Are you already a BabyFit Member and want to create your own <b>FREE Personal Homepage?</b><br>
+		<br>
+		<a href="http://babyfit.sparkpeople.com/mypage_create.asp" class="pink_blue12h">Click Here</a>
+		</td>
+      </tr>
+    </table>
+    </td>
+  </tr> 
+</table>
+<br>
+<table class="hide" width="206" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center"><a href="http://babyfit.sparkpeople.com/mypage.asp?id=PCOS22#" ><img src="http://babyfit.sparkpeople.com/images/phm_today2.jpg" alt="" border="0" vspace="6"></a></td>
+  </tr>
+  <tr>
+    <td align="center"><table width="90%"  border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>
+				  <div id="today_sponsored">
+	        <ul class="links">
+ <li><a href="http://babyfit.sparkpeople.com/fit-pregnancy.asp" >Pregnancy Fitness Articles</a></li>
+ <li><a href="http://babyfit.sparkpeople.com/nutrition-during-pregnancy.asp" >Pregnancy Nutrition Articles</a></li>
+ <li><a href="http://babyfit.sparkpeople.com/pregnancy-questions.asp" >General Pregnancy Articles</a></li>
+ <li><a href="http://babyfit.sparkpeople.com/pregnancy-exercise.asp" >Pregnancy Exercise Demos</a></li>
+ <li><a href="http://babyfit.sparkpeople.com/pregnancy-recipes.asp" >Pregnancy Recipes</a></li>
+ <li><a href="http://babyfit.sparkpeople.com/hmc-overview.asp" >Learn About the Healthy Mom Challenge</a></li>
+
+			</ul>
+			
+          </div>
+		</td>
+      </tr>
+    </table>
+    </td>
+  </tr> 
+</table>
+<br>
+<table class="hide" width="206" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center"><a href="http://babyfit.sparkpeople.com/register.asp" ><img src="http://babyfit.sparkpeople.com/images/phm_today3.jpg" alt="" border="0" vspace="6"></a></td>
+  </tr>
+  <tr>
+    <td align="center"><table width="90%"  border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>
+		<img src="http://babyfit.sparkpeople.com/images/phm_pregnant.jpg" alt="" border="0"><br>
+		<br>
+		<b>Join BabyFit for FREE</b> to get a personalized healthy pregnancy program and more!<br><br>
+		<a href="http://babyfit.sparkpeople.com/register.asp" class="pink_blue12h">Join Now For FREE!</a>
+		</td>
+      </tr>
+    </table>
+    </td>
+  </tr> 
+</table>
+</td> 
+	
+    </tr>
+</table>

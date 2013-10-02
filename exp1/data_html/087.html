@@ -1,0 +1,779 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+		<meta name="generator" content="Adobe GoLive 5">
+		<title>Alpha Sigma Alpha</title>
+		<csscriptdict>
+			<script><!--
+CSInit = new Array;
+function CSScriptInit() {
+if(typeof(skipPage) != "undefined") { if(skipPage) return; }
+idxArray = new Array;
+for(var i=0;i<CSInit.length;i++)
+	idxArray[i] = i;
+CSAction2(CSInit, idxArray);}
+CSAg = window.navigator.userAgent; CSBVers = parseInt(CSAg.charAt(CSAg.indexOf("/")+1),10);
+function IsIE() { return CSAg.indexOf("MSIE") > 0;}
+function CSIEStyl(s) { return document.all.tags("div")[s].style; }
+function CSNSStyl(s) { return CSFindElement(s,0); }
+function CSFindElement(n,ly) { if (CSBVers < 4) return document[n];
+	var curDoc = ly ? ly.document : document; var elem = curDoc[n];
+	if (!elem) { for (var i=0;i<curDoc.layers.length;i++) {
+		elem = CSFindElement(n,curDoc.layers[i]); if (elem) return elem; }}
+	return elem;
+}
+
+function CSClickReturn () {
+	var bAgent = window.navigator.userAgent; 
+	var bAppName = window.navigator.appName;
+	if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0))
+		return true; // dont follow link
+	else return false; // dont follow link
+}
+
+function CSButtonReturn () {
+	var bAgent = window.navigator.userAgent; 
+	var bAppName = window.navigator.appName;
+	if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0))
+		return false; // follow link
+	else return true; // follow link
+}
+
+CSIm = new Object();
+function CSIShow(n,i) {
+	if (document.images) {
+		if (CSIm[n]) {
+			var img = (!IsIE()) ? CSFindElement(n,0) : document[n];
+			if (img && typeof(CSIm[n][i].src) != "undefined") {img.src = CSIm[n][i].src;}
+			if(i != 0)
+				self.status = CSIm[n][3];
+			else
+				self.status = " ";
+			return true;
+		}
+	}
+	return false;
+}
+function CSILoad(action) {
+	im = action[1];
+	if (document.images) {
+		CSIm[im] = new Object();
+		for (var i=2;i<5;i++) {
+			if (action[i] != '') { CSIm[im][i-2] = new Image(); CSIm[im][i-2].src = action[i]; }
+			else CSIm[im][i-2] = 0;
+		}
+		CSIm[im][3] = action[5];
+	}
+}
+CSStopExecution = false;
+function CSAction(array) { 
+	return CSAction2(CSAct, array);
+}
+function CSAction2(fct, array) { 
+	var result;
+	for (var i=0;i<array.length;i++) {
+		if(CSStopExecution) return false; 
+		var actArray = fct[array[i]];
+		if (actArray == null) return false;
+		var tempArray = new Array;
+		for(var j=1;j<actArray.length;j++) {
+			if((actArray[j] != null) && (typeof(actArray[j]) == "object") && (actArray[j].length == 2)) {
+				if(actArray[j][0] == "VAR") {
+					tempArray[j] = CSStateArray[actArray[j][1]];
+				}
+				else {
+					if(actArray[j][0] == "ACT") {
+						tempArray[j] = CSAction(new Array(new String(actArray[j][1])));
+					}
+				else
+					tempArray[j] = actArray[j];
+				}
+			}
+			else
+				tempArray[j] = actArray[j];
+		}			
+		result = actArray[0](tempArray);
+	}
+	return result;
+}
+CSAct = new Object;
+
+
+// --></script>
+		</csscriptdict>
+		<csactiondict>
+			<script><!--
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button',/*URL*/'images/home_off.jpg',/*URL*/'images/home_on.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button2',/*URL*/'images/alumni_off.jpg',/*URL*/'images/alumni_on.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button4',/*URL*/'images/creed_off.jpg',/*URL*/'images/creed_on.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button5',/*URL*/'images/active_off.jpg',/*URL*/'images/active_on.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button6',/*URL*/'images/scrap_off.jpg',/*URL*/'images/scrap_on.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button7',/*URL*/'images/links_off.jpg',/*URL*/'images/links_on.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button8',/*URL*/'images/newmem_off.jpg',/*URL*/'images/newmem_on.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button10',/*URL*/'images/rush_off.jpg',/*URL*/'images/rush_on.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button11',/*URL*/'images/awards_off.jpg',/*URL*/'images/awards_on.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button12',/*URL*/'images/phil_off.jpg',/*URL*/'images/phil_on.jpg',/*URL*/'','');
+
+// --></script>
+		</csactiondict>
+	</head>
+
+	<body bgcolor="#ffffff" leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" onLoad="CSScriptInit();">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+          <tr height="200">
+            <td width="190" height="200"><img src="http://sai.cup.edu/asa/images/top_left.jpg" width="190" height="200" border="0"></td>
+            <td width="601" height="200"><img src="http://sai.cup.edu/asa/images/top.jpg" width="601" height="200" border="0"></td>
+            <td background="images/top_bkg.jpg" height="200"><font color="#ee0000">&nbsp; </font></td>
+          </tr>
+          <tr>
+            <td width="190" height="5142" valign="top" background="../images/side_bkg.jpg"><csobj w="190" h="23" t="Button" ht="images/home_on.jpg"><a href="http://sai.cup.edu/asa/main.html" onMouseOver="return CSIShow(/*CMP*/'button',1)" onMouseOut="return CSIShow(/*CMP*/'button',0)" onClick="return CSButtonReturn()"><img src="http://sai.cup.edu/asa/images/home_off.jpg" width="190" height="23" name="button" border="0"></a></csobj><csobj w="190" h="30" t="Button" ht="images/alumni_on.jpg"><a href="http://sai.cup.edu/asa/alumni.html" onMouseOver="return CSIShow(/*CMP*/'button2',1)" onMouseOut="return CSIShow(/*CMP*/'button2',0)" onClick="return CSButtonReturn()"><img src="http://sai.cup.edu/asa/images/alumni_off.jpg" width="190" height="30" name="button2" border="0"></a></csobj><csobj w="190" h="47" t="Button" ht="images/creed_on.jpg"><a href="http://sai.cup.edu/asa/creed.html" onMouseOver="return CSIShow(/*CMP*/'button4',1)" onMouseOut="return CSIShow(/*CMP*/'button4',0)" onClick="return CSButtonReturn()"><img src="http://sai.cup.edu/asa/images/creed_off.jpg" width="190" height="47" name="button4" border="0"></a></csobj><csobj w="190" h="44" t="Button" ht="images/active_on.jpg"><a href="http://sai.cup.edu/asa/active.html" onMouseOver="return CSIShow(/*CMP*/'button5',1)" onMouseOut="return CSIShow(/*CMP*/'button5',0)" onClick="return CSButtonReturn()"><img src="http://sai.cup.edu/asa/images/active_off.jpg" width="190" height="44" name="button5" border="0"></a></csobj><csobj w="190" h="32" t="Button" ht="images/scrap_on.jpg"><a href="http://sai.cup.edu/asa/scrapbook.html" onMouseOver="return CSIShow(/*CMP*/'button6',1)" onMouseOut="return CSIShow(/*CMP*/'button6',0)" onClick="return CSButtonReturn()"><img src="http://sai.cup.edu/asa/images/scrap_off.jpg" width="190" height="32" name="button6" border="0"></a></csobj><csobj w="190" h="30" t="Button" ht="images/links_on.jpg"><a href="http://sai.cup.edu/asa/links.html" onMouseOver="return CSIShow(/*CMP*/'button7',1)" onMouseOut="return CSIShow(/*CMP*/'button7',0)" onClick="return CSButtonReturn()"><img src="http://sai.cup.edu/asa/images/links_off.jpg" width="190" height="30" name="button7" border="0"></a></csobj><csobj w="190" h="46" t="Button" ht="images/newmem_on.jpg"><a href="http://sai.cup.edu/asa/new.html" onMouseOver="return CSIShow(/*CMP*/'button8',1)" onMouseOut="return CSIShow(/*CMP*/'button8',0)" onClick="return CSButtonReturn()"><img src="http://sai.cup.edu/asa/images/newmem_off.jpg" width="190" height="46" name="button8" border="0"></a></csobj><csobj w="190" h="30" t="Button" ht="images/rush_on.jpg"><a href="http://sai.cup.edu/asa/rush.html" onMouseOver="return CSIShow(/*CMP*/'button10',1)" onMouseOut="return CSIShow(/*CMP*/'button10',0)" onClick="return CSButtonReturn()"><img src="http://sai.cup.edu/asa/images/rush_off.jpg" width="190" height="30" name="button10" border="0"></a></csobj><csobj w="190" h="30" t="Button" ht="images/awards_on.jpg"><a href="http://sai.cup.edu/asa/awards.html" onMouseOver="return CSIShow(/*CMP*/'button11',1)" onMouseOut="return CSIShow(/*CMP*/'button11',0)" onClick="return CSButtonReturn()"><img src="http://sai.cup.edu/asa/images/awards_off.jpg" width="190" height="30" name="button11" border="0"></a></csobj><csobj w="190" h="44" t="Button" ht="images/phil_on.jpg"><a href="http://sai.cup.edu/asa/phil.html" onMouseOver="return CSIShow(/*CMP*/'button12',1)" onMouseOut="return CSIShow(/*CMP*/'button12',0)" onClick="return CSButtonReturn()"><img src="http://sai.cup.edu/asa/images/phil_off.jpg" width="190" height="44" name="button12" border="0"></a></csobj></td>
+            <td width="601" background="../images/bkg.gif" valign="top">
+              <div align="center"> <b><font size="5" face="Adriatic">Active Sisters </font></b>
+                  <table width="100%" border="0" cellpadding="5" cellspacing="0">
+                    <tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Erin
+                                Rumpler</font><font face="Bookman"><br>
+                                <br>
+                                Philanthropy and VP of Public Relations <br>
+                                                </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >Rum5288@cup.edu</a><br>
+                                                <b><br>
+                                                <img src="http://sai.cup.edu/asa/asa/rumpler.jpg" width="166" height="167" border="2" align="left"></b><strong>Hometown: </strong>Pittsburgh,
+                                                PA <br>
+                                                <strong>Major:</strong> Social
+                                                Work <br>
+                                                <strong>Year in College:</strong> Senior <br>
+                                                <strong>Birthday:</strong> February
+                                                24th<br>
+                                                <strong>Nickname:</strong> Cupcake <br>
+                                                <strong>Favorite Quote/Saying:</strong> Learn
+                                                from the past, live in the present,
+                                                dream of the future<br>
+                                                <strong>Semester Initiated:</strong> Spring
+                                                2003 <br>
+                                                <strong>Big Sister:</strong> Sue
+                                                Shuemaker <br>
+                                                <strong>Future: </strong>To become
+                                                a social worker and hopefully
+                          help as many people as I can. </font></font><font face="Bookman">&nbsp;</font></p>
+                          <p>&nbsp;</p>                      </td>
+                    </tr>
+                    <tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Rachel &quot;Gisele&quot; Shearer </font><font face="Bookman"><br>
+                                <br>
+                                VP of PR and Recruitment
+                                <br>
+                                                </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >She5288@cup.edu</a><br>
+                                                <b><br>
+                                                <img src="http://sai.cup.edu/asa/new pics/043.JPG" width="192" height="190" border="2" align="left"></b><strong>Hometown: </strong>Middle of Nowhere, PA <br>
+                                                <strong>Major:</strong> Political science and Psychology <br>
+                                                <strong>Year in College:</strong> Junior <br>
+                                                <strong>Birthday:</strong> 02/22/1987<br>
+                                                <strong>Nickname:</strong> Gisele, Gizaboo, Giz <br>
+                                                <strong>Favorite Quote/Saying:</strong> &quot;I knew I belonged to the world, not because I was talented or even beautiful, but because I never belonged to anything or anyone else.&quot; - Marilyn Monroe <br>
+                                                <strong>Semester Initiated:</strong> Fall 2006 <br>
+                                                <strong>Big Sister: </strong>Chelsea Faye Matthews  </font></font></p>
+                        <p><strong><font size="2" face="Bookman">F</font></strong><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><font face="Bookman"><strong>uture: </strong></font></font><font size="2" face="Bookman">Lawyer</font></p>
+                      <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Keshia Shelott </font><font face="Bookman"><br>
+                                <br>
+                                VP of Alumnae and Heritage                                 <br>
+                                                </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >She6605@cup.edu</a><br>
+                                                <b><br></b></font><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><font face="Bookman"><b><img src="http://sai.cup.edu/asa/new pics/018.JPG" width="166" height="167" border="2" align="left"></b></font></font><font face="Bookman"><strong>Hometown: </strong>Jefferson<br>
+                                                <strong>Major:</strong> Social
+                                                Work <br>
+                                                <strong>Year in College:</strong> Sophomore <br>
+                                                <strong>Birthday:</strong> 11/03/1988 <br>
+                                                <strong>Nickname:</strong> None <br>
+                                                <strong>Favorite Quote/Saying: </strong>&quot;The greatest wisdom in life is knowing that you know nothing.&quot; - Socrates  <br>
+                                                <strong>Semester Initiated:</strong> Spring 2007 <br>
+                                                <strong>Big Sister:</strong> Rachel Shearer <br>
+                                                <strong>Future: </strong></font></font><font size="2" face="Bookman">Work as a case worker for foster kids and families. </font></p>
+                          <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Jenna Marin </font><font face="Bookman"><br>
+                                <br>
+                                Philanthrophy                                <br>
+                                                </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >Mar3101@cup.edu</a><br>
+                                                <b><br>
+                                                <img src="http://sai.cup.edu/asa/new pics/047.JPG" width="166" height="167" border="2" align="left"></b><strong>Hometown: </strong>Allentown<br>
+                                                <strong>Major:</strong> Social
+                                                Work <br>
+                                                <strong>Year in College:</strong> Senior <br>
+                                                <strong>Birthday:</strong> 03/06/1985 <br>
+                                                <strong>Nickname:</strong> Lush <br>
+                                                <strong>Favorite Quote/Saying:</strong> Friends are like stars, you may not always see them but you know they are always there. <br>
+                                                <strong>Semester Initiated:</strong> Spring
+                                                2007 <br>
+                                                <strong>Big Sister:</strong> Heather Pownall <br>
+                                                <strong>Future: </strong></font></font><font size="2" face="Bookman"> To graduate and move south!!! </font></p>
+                          <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Mallory Branham </font><font face="Bookman"><br>
+                                <br>
+                      Standards Chair, Sisterhood, and Ritual Chair                                 <br>
+                                                </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >Bra9711@cup.edu</a><br>
+                                                <b><br>
+                                                <img src="http://sai.cup.edu/asa/new pics/031.JPG" width="167" height="173" border="2" align="left"></b><strong>Hometown: </strong> Chapin, SC <br>
+                                                <strong>Major:</strong> Psychology <br>
+                                                <strong>Year in College:</strong> Sophomore <br>
+                                                <strong>Birthday:</strong> 06/24/1988 <br>
+                                                <strong>Nickname:</strong> Mally <br>
+                                                <strong>Favorite Quote/Saying:</strong> &quot;Imperfection is beauty, madness is genuis, and it's better to be absoluetly rediculous than absoluetly boring and when it comes down to it, I let them think what they want, if they care enough to bother with what I do, then Im already better than them.&quot; - Marilyn Monroe <br>
+                                                <strong>Semester Initiated:</strong> Spring
+                                                2007 <br>
+                                                <strong>Big Sister:</strong> Samantha Zeker <br>
+                                                <strong>Future: </strong>Be successful.  </font></font><font face="Bookman">&nbsp;</font></p>
+                          <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Heather Lauricella </font><font face="Bookman"><br>
+                                <br>
+  VP of Alumnae and Heritage                              <br>
+                                                </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >Lau2710@cup.edu</a><br>
+                                                <b><br>
+                                                <img src="http://sai.cup.edu/asa/new pics/020.JPG" width="166" height="167" border="2" align="left"></b><strong>Hometown: </strong>Sugarloaf, PA <br>
+                                                <strong>Major:</strong> Art Education <br>
+                                                <strong>Year in College:</strong> Sophomore <br>
+                                                <strong>Birthday:</strong> 11/19/1987 <br>
+                                                <strong>Nickname:</strong> None <br>
+                                                <strong>Favorite Quote/Saying:</strong> &quot;Be who you are and say what you feel, because those who mind don't matter and those who matter don't mind. <br>
+                                                <strong>Semester Initiated:</strong> Spring
+                                                2007 <br>
+                                                <strong>Big Sister:</strong> Erin Dominici <br>
+                                                <strong>Future: </strong></font></font><font size="2" face="Bookman">Become an art teacher and move somewhere warm. </font></p>
+                          <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Christina Longo </font><font face="Bookman"><br>
+                                <br>
+                                Treasurer and Scholarship chair                                 <br>
+                                                </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >Lon2457@cup.edu</a><br>
+                                                <b><br>
+                                                <img src="http://sai.cup.edu/asa/new pics/064.JPG" width="166" height="167" border="2" align="left"></b><strong>Hometown: </strong>Philadelphia<br>
+                                                <strong>Major:</strong> Earth Science <br>
+                                                <strong>Year in College:</strong> Junior <br>
+                                                <strong>Birthday:</strong> 08/28/1985 <br>
+                                                <strong>Nickname:</strong> Chris <br>
+                                                <strong>Favorite Quote/Saying:</strong> Why a word to the wise? It's the stupid ones who need advice. <br>
+                                                <strong>Semester Initiated:</strong> Spring
+                                                2007 <br>
+                                                <strong>Big Sister:</strong> Kelly Policicchio <br>
+                                                <strong>Future: </strong></font></font><font size="2" face="Bookman">Go to grad school, get an amazing job, and find someone who makes me happy! </font></p>
+                          <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Sara Anne Wylie </font><font face="Bookman"><br>
+                                <br>
+                                <br>
+                                                </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >Wyl1062@cup.edu</a><br>
+                                                <b><br>
+                                                <img src="http://sai.cup.edu/asa/new pics/n60704748_30863728_6207.jpg" width="166" height="167" border="2" align="left"></b><strong>Hometown: </strong>Mt. Lebanon <br>
+                                                <strong>Major:</strong> Criminal Justice: Forensic Science <br>
+                                                <strong>Year in College:</strong> Junior <br>
+                                                <strong>Birthday:</strong> 07/10/1987 <br>
+                                                <strong>Nickname:</strong> None <br>
+                                                <strong>Favorite Quote/Saying:</strong> &quot;Live everyday like it's your last.&quot; <br>
+                                                <strong>Semester Initiated:</strong> Spring
+                                                2007 <br>
+                                                <strong>Big Sister:</strong> Kelly Policicchio <br>
+                                                <strong>Future: </strong> Become a crime scene investigator </font></font></p>
+                          <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Kara Nickholds </font><font face="Bookman"><br>
+                                <br>
+                      <br>
+                                                </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >Nic2251@cup.edu</a><br>
+                                                <b><br>
+                                                <img src="http://sai.cup.edu/asa/new pics/019.JPG" width="166" height="167" border="2" align="left"></b><strong>Hometown: </strong>Sewickley<br>
+                                                <strong>Major:</strong> Psychology <br>
+                                                <strong>Year in College:</strong> Sophomore <br>
+                                                <strong>Birthday:</strong> 09/23/1988 <br>
+                                                <strong>Nickname:</strong> Moo <br>
+                                                <strong>Favorite Quote/Saying:</strong> </font><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><font face="Bookman">&quot;Imperfection is beauty, madness is genuis, and it's better to be absoluetly rediculous than absoluetly boring and when it comes down to it, I let them think what they want, if they care enough to bother with what I do, then Im already better than them.&quot; - Marilyn Monroe </font></font><font face="Bookman"><br>
+                                                <strong>Semester Initiated:</strong> Fall 2007 <br>
+                                                <strong>Big Sister:</strong> Kelly Policicchio <br>
+                                                <strong>Future: </strong>Attend grad school, earn my Master's degree, then eventually go on to earn a Doctorate degree. </font></font></p>
+                          </td>
+                    </tr><tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Jennifer Lynn LoPresti </font><font face="Bookman"><br>
+                                <br>
+                      Panhel Delegate and PR chair <br>
+                                                </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >Lop6318@cup.edu</a><br>
+                                                <b><br>
+                                                <img src="http://sai.cup.edu/asa/new pics/013.JPG" width="166" height="167" border="2" align="left"></b><strong>Hometown: </strong> Bethel Park <br>
+                                                <strong>Major:</strong> Elementary Education <br>
+                                                <strong>Year in College:</strong> Sophomore <br>
+                                                <strong>Birthday:</strong> 05/25/1988 <br>
+                                                <strong>Nickname:</strong> Jenn <br>
+                                                <strong>Favorite Quote/Saying:</strong> &quot;What you fear the most is usually the most worthwhile.&quot; <br>
+                                                <strong>Semester Initiated:</strong> Fall 2007 <br>
+                                                <strong>Big Sister:</strong> Brianna Akins <br>
+                                                <strong>Future: </strong></font></font><font size="2" face="Bookman">To be a happy person with a comfortable future. </font></p>
+                          <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Ashley Kurta </font><font face="Bookman"><br>
+                                <br>
+                      <br>
+                                                </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >Kur5261@cup.edu</a><br>
+                                                <b><br>
+                                                <img src="http://sai.cup.edu/asa/new pics/036.JPG" width="166" height="167" border="2" align="left"></b><strong>Hometown: </strong>Perryopolis<br>
+                                                <strong>Major:</strong> Business Management <br>
+                                                <strong>Year in College:</strong> Sopomore <br>
+                                                <strong>Birthday:</strong> 09/30/1987 <br>
+                                                <strong>Nickname:</strong> Umaga <br>
+                                                <strong>Favorite Quote/Saying:</strong> &quot;I wouldn't let you sleep in my room, if you were growing on my ass!&quot; <br>
+                                                <strong>Semester Initiated:</strong> Fall 2007 <br>
+                                                <strong>Big Sister:</strong> Christina Longo <br>
+                                                <strong>Future: </strong>Get my Master's in Business, then maybe start my own business or work on a cruise line. </font></font><font face="Bookman">&nbsp;</font></p>
+                          <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Samantha Zeker </font><font face="Bookman"><br>
+                                <br>
+                      <br>
+                                                </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >Zek8566@cup.edu</a><br>
+                                                <b><br>
+                                                <img src="http://sai.cup.edu/asa/new pics/n72400607_30402335_9732.jpg" width="166" height="196" border="2" align="left"></b><strong>Hometown: </strong> Bethel Park <br>
+                                                <strong>Major:</strong> Business Administration <br>
+                                                <strong>Year in College:</strong> Junior <br>
+                                                <strong>Birthday:</strong> 10/30/1986 <br>
+                                                <strong>Nickname:</strong> Sme <br>
+                                                <strong>Favorite Quote/Saying:</strong> &quot;I'll allow it.&quot; (While raising my right hand...don't ask.) <br>
+                                                <strong>Semester Initiated:</strong> Spring
+                                                2005 <br>
+                                                <strong>Big Sister:</strong> Lacey Twigg <br>
+                                                <strong>Future: </strong></font></font><font size="2" face="Bookman">Hopefully an event coordinator. </font></p>
+                          <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Gena Ezzi </font><font face="Bookman"><br>
+                                <br>
+<br>
+                                                </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >Ezz0035@cup.edu</a><br>
+                                                <b><br>
+                                                <img src="http://sai.cup.edu/asa/new pics/032.JPG" width="166" height="167" border="2" align="left"></b><strong>Hometown: </strong>Uniontown<br>
+                                                <strong>Major:</strong> Pre-Med <br>
+                                                <strong>Year in College:</strong> Freshman <br>
+                                                <strong>Birthday:</strong> 03/13/1989 <br>
+                                                <strong>Nickname:</strong> G <br>
+                                                <strong>Favorite Quote/Saying:</strong> &quot;We don't make mistakes here, we just have happy accidents. Everything is possible here. This is your little universe.&quot; - Bob Ross <br>
+                                                <strong>Semester Initiated:</strong> Spring
+                                                2008 <br>
+                                                <strong>Big Sister:</strong> Chelsea Faye Matthews <br>
+                                                <strong>Future: </strong></font></font><font size="2" face="Bookman">Become a doctor and then pursue a husband, children, etc... </font></p>
+                          <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Patricia E. Balch </font><font face="Bookman"><br>
+                                <br>
+                      <br>
+                                                </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >Bal5682@cup.edu</a><br>
+                                                <b><br>
+                                                <img src="http://sai.cup.edu/asa/new pics/226.JPG" width="166" height="167" border="2" align="left"></b><strong>Hometown: </strong>Lehighton <br>
+                                                <strong>Major:</strong> Athletic Training/Wellness and fitness <br>
+                                                <strong>Year in College:</strong> Freshman/Sophomore <br>
+                                                <strong>Birthday:</strong> 11/18/1987 <br>
+                                                <strong>Nickname:</strong> Tricia <br>
+                                                <strong>Favorite Quote/Saying:</strong> &quot;Live, laugh, love. Love is patient, love is kind.&quot; <br>
+                                                <strong>Semester Initiated:</strong> Spring
+                                                2008 <br>
+                                                <strong>Big Sister:</strong> Brianna Akins <br>
+                                                <strong>Future: </strong></font></font><font size="2" face="Bookman">Be an athletic trainer for professional football and teach high school physical education. </font></p>
+                          <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Samantha McMasters </font><font face="Bookman"><br>
+                                <br>
+                                <br>
+                                                </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >Mcm2105@cup.edu</a><br>
+                                                <b><br>
+                                                <img src="http://sai.cup.edu/asa/new pics/023.JPG" width="166" height="167" border="2" align="left"></b><strong>Hometown: </strong>Washington<br>
+                                                <strong>Major:</strong> Secondary education/Math <br>
+                                                <strong>Year in College:</strong> Freshman <br>
+                                                <strong>Birthday:</strong> 04/13/1989 <br>
+                                                <strong>Nickname:</strong> Sammy <br>
+                                                <strong>Favorite Quote/Saying:</strong> &quot;You only live once, so live as if you were to die tomorrow.&quot; <br>
+                                                <strong>Semester Initiated:</strong> Spring
+                                                2008 <br>
+                                                <strong>Big Sister:</strong> Mallory Branham <br>
+                                                <strong>Future: </strong></font></font><font size="2" face="Bookman">Become a middle school math teaher, get married, have a family, and just be happy!! </font></p>
+                          <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Ashley N. Farrar </font><font face="Bookman"><br>
+                                <br>
+                      <br>
+                                                </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >Far7036@cup.edu</a><br>
+                                                <b><br>
+                                                <img src="http://sai.cup.edu/asa/new pics/044.JPG" width="166" height="167" border="2" align="left"></b><strong>Hometown: </strong>Colorado Springs, Colorado <br>
+                                                <strong>Major:</strong> English: Journalism <br>
+                                                <strong>Year in College:</strong> Sophomore <br>
+                                                <strong>Birthday:</strong> 10/16/1988 <br>
+                                                <strong>Nickname:</strong> AshJag <br>
+                                                <strong>Favorite Quote/Saying:</strong> &quot;Well behaved women rarely make history!&quot; - Marilyn Monroe <br>
+                                                <strong>Semester Initiated:</strong> Spring
+                                                2008 <br>
+                                                <strong>Big Sister:</strong> Heather Pownall <br>
+                                                <strong>Future: </strong></font></font><font size="2" face="Bookman"> Possibly news anchor, or freelance writer. </font></p>
+                          <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Molly DeLong </font><font face="Bookman"><br>
+                                <br>
+                      <br>
+                                                </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >Del5211@cup.edu</a><br>
+                                                <b><br>
+                                                <img src="http://sai.cup.edu/asa/new pics/037.JPG" width="166" height="167" border="2" align="left"></b><strong>Hometown: </strong>Glens Falls, NY <br>
+                                                <strong>Major:</strong> Social Work <br>
+                                                <strong>Year in College:</strong> Junior <br>
+                                                <strong>Birthday:</strong> 11/05/1987 <br>
+                                                <strong>Nickname:</strong> N.Y.'s Finest <br>
+                                                <strong>Favorite Quote/Saying:</strong> &quot;We few, we happy few, we band of brothers; For he that sheds his blood with me, shall be my brother.&quot; - Henry V <br>
+                                                <strong>Semester Initiated:</strong> Spring
+                                                2008 <br>
+                                                <strong>Big Sister:</strong> Michele Griger <br>
+                                                <strong>Future: </strong></font></font><font size="2" face="Bookman">Be a social Worker. </font></p>
+                          <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Holly VanDyke </font><font face="Bookman"><br>
+                                <br>
+                      Secretary                                <br>
+                                                </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >Van4004@cup.edu</a><br>
+                                                <b><br>
+                                                <img src="http://sai.cup.edu/asa/new pics/034.JPG" width="166" height="167" border="2" align="left"></b><strong>Hometown: </strong>Indiana<br>
+                                                <strong>Major:</strong> Psychology <br>
+                                                <strong>Year in College:</strong> Sophomore <br>
+                                                <strong>Birthday:</strong> 12/02/1987 <br>
+                                                <strong>Nickname:</strong> Holls <br>
+                                                <strong>Favorite Quote/Saying:</strong> &quot;You can never be old and wise if you were never young and crazy.&quot; <br>
+                                                <strong>Semester Initiated:</strong> Spring
+                                                2007 <br>
+                                                <strong>Big Sister:</strong> Rachel Shearer <br>
+                                                <strong>Future: </strong></font></font><font size="2" face="Bookman">Prison psychologist. </font></p>
+                          <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Mary Hawthorne </font><font face="Bookman"><br>
+                                <br>
+                      Panhel Delegate and Recruitment Chair                                 <br>
+                                                </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >Haw7426@cup.edu</a><br>
+                                                <b><br>
+                                                <img src="http://sai.cup.edu/asa/new pics/016.JPG" width="166" height="167" border="2" align="left"></b><strong>Hometown: </strong>Pittsburgh<br>
+                                                <strong>Major:</strong> Early Childhood Education <br>
+                                                <strong>Year in College:</strong> Sophomore <br>
+                                                <strong>Birthday: </strong>07/24/1987<br>
+                                                <strong>Nickname:</strong> Paco <br>
+                                                <strong>Favorite Quote/Saying:</strong> &quot;Live for the nights you won't remember with the friends you'll never forget.&quot; <br>
+                                                <strong>Semester Initiated:</strong> Spring
+                                                2007 <br>
+                                                <strong>Big Sister:</strong> Rebecca Kairis <br>
+                                                <strong>Future: </strong></font></font><font size="2" face="Bookman">Move to the beach. </font></p>
+                          <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Heather Pownall </font><font face="Bookman"><br>
+                                <br>
+                                Philanthropy and VP of Public Relations <br>
+                                                </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >Rum5288@cup.edu</a><br>
+                                                <b><br>
+                                                <img src="http://sai.cup.edu/asa/new pics/009.JPG" width="166" height="167" border="2" align="left"></b><strong>Hometown: </strong>Pittsburgh,
+                                                PA <br>
+                                                <strong>Major:</strong> Social
+                                                Work <br>
+                                                <strong>Year in College:</strong> Freshman <br>
+                                                <strong>Birthday:</strong> February
+                                                24th<br>
+                                                <strong>Nickname:</strong> Cupcake <br>
+                                                <strong>Favorite Quote/Saying:</strong> Learn
+                                                from the past, live in the present,
+                                                dream of the future<br>
+                                                <strong>Semester Initiated:</strong> Spring
+                                                2003 <br>
+                                                <strong>Big Sister:</strong> Sue
+                                                Shuemaker <br>
+                                                <strong>Future: </strong>To become
+                                                a social worker and hopefully
+                          help as many people as I can. </font></font><font face="Bookman">&nbsp;</font></p>
+                          <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Rebecca Kairis </font><font face="Bookman"><br>
+                                <br>
+                                Philanthropy and VP of Public Relations <br>
+                                                </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >Rum5288@cup.edu</a><br>
+                                                <b><br>
+                                                <img src="http://sai.cup.edu/asa/new pics/011.JPG" width="166" height="167" border="2" align="left"></b><strong>Hometown: </strong>Pittsburgh,
+                                                PA <br>
+                                                <strong>Major:</strong> Social
+                                                Work <br>
+                                                <strong>Year in College:</strong> Freshman <br>
+                                                <strong>Birthday:</strong> February
+                                                24th<br>
+                                                <strong>Nickname:</strong> Cupcake <br>
+                                                <strong>Favorite Quote/Saying:</strong> Learn
+                                                from the past, live in the present,
+                                                dream of the future<br>
+                                                <strong>Semester Initiated:</strong> Spring
+                                                2003 <br>
+                                                <strong>Big Sister:</strong> Sue
+                                                Shuemaker <br>
+                                                <strong>Future: </strong>To become
+                                                a social worker and hopefully
+                          help as many people as I can. </font></font><font face="Bookman">&nbsp;</font></p>
+                          <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Michele Griger </font><font face="Bookman"><br>
+                                <br>
+                                Philanthropy and VP of Public Relations <br>
+                                                </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >Rum5288@cup.edu</a><br>
+                                                <b><br>
+                                                <img src="http://sai.cup.edu/asa/new pics/026.JPG" width="166" height="167" border="2" align="left"></b><strong>Hometown: </strong>Pittsburgh,
+                                                PA <br>
+                                                <strong>Major:</strong> Social
+                                                Work <br>
+                                                <strong>Year in College:</strong> Freshman <br>
+                                                <strong>Birthday:</strong> February
+                                                24th<br>
+                                                <strong>Nickname:</strong> Cupcake <br>
+                                                <strong>Favorite Quote/Saying:</strong> Learn
+                                                from the past, live in the present,
+                                                dream of the future<br>
+                                                <strong>Semester Initiated:</strong> Spring
+                                                2003 <br>
+                                                <strong>Big Sister:</strong> Sue
+                                                Shuemaker <br>
+                                                <strong>Future: </strong>To become
+                                                a social worker and hopefully
+                          help as many people as I can. </font></font><font face="Bookman">&nbsp;</font></p>
+                          <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Amanda Lentz </font><font face="Bookman"><br>
+                                <br>
+                                Philanthropy and VP of Public Relations <br>
+                                                </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >Rum5288@cup.edu</a><br>
+                                                <b><br>
+                                                <img src="http://sai.cup.edu/asa/new pics/033.JPG" width="166" height="167" border="2" align="left"></b><strong>Hometown: </strong>Pittsburgh,
+                                                PA <br>
+                                                <strong>Major:</strong> Social
+                                                Work <br>
+                                                <strong>Year in College:</strong> Freshman <br>
+                                                <strong>Birthday:</strong> February
+                                                24th<br>
+                                                <strong>Nickname:</strong> Cupcake <br>
+                                                <strong>Favorite Quote/Saying:</strong> Learn
+                                                from the past, live in the present,
+                                                dream of the future<br>
+                                                <strong>Semester Initiated:</strong> Spring
+                                                2003 <br>
+                                                <strong>Big Sister:</strong> Sue
+                                                Shuemaker <br>
+                                                <strong>Future: </strong>To become
+                                                a social worker and hopefully
+                          help as many people as I can. </font></font><font face="Bookman">&nbsp;</font></p>
+                          <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Lauren Jackson </font><font face="Bookman"><br>
+                                <br>
+                                Philanthropy and VP of Public Relations <br>
+                                                </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >Rum5288@cup.edu</a><br>
+                                                <b><br>
+                                                <img src="http://sai.cup.edu/asa/new pics/038.JPG" width="166" height="167" border="2" align="left"></b><strong>Hometown: </strong>Pittsburgh,
+                                                PA <br>
+                                                <strong>Major:</strong> Social
+                                                Work <br>
+                                                <strong>Year in College:</strong> Freshman <br>
+                                                <strong>Birthday:</strong> February
+                                                24th<br>
+                                                <strong>Nickname:</strong> Cupcake <br>
+                                                <strong>Favorite Quote/Saying:</strong> Learn
+                                                from the past, live in the present,
+                                                dream of the future<br>
+                                                <strong>Semester Initiated:</strong> Spring
+                                                2003 <br>
+                                                <strong>Big Sister:</strong> Sue
+                                                Shuemaker <br>
+                                                <strong>Future: </strong>To become
+                                                a social worker and hopefully
+                          help as many people as I can. </font></font><font face="Bookman">&nbsp;</font></p>
+                          <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Danielle Deery </font><font face="Bookman"><br>
+                                <br>
+                                Philanthropy and VP of Public Relations <br>
+                                                </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >Rum5288@cup.edu</a><br>
+                                                <b><br>
+                                                <img src="http://sai.cup.edu/asa/new pics/046.JPG" width="166" height="167" border="2" align="left"></b><strong>Hometown: </strong>Pittsburgh,
+                                                PA <br>
+                                                <strong>Major:</strong> Social
+                                                Work <br>
+                                                <strong>Year in College:</strong> Freshman <br>
+                                                <strong>Birthday:</strong> February
+                                                24th<br>
+                                                <strong>Nickname:</strong> Cupcake <br>
+                                                <strong>Favorite Quote/Saying:</strong> Learn
+                                                from the past, live in the present,
+                                                dream of the future<br>
+                                                <strong>Semester Initiated:</strong> Spring
+                                                2003 <br>
+                                                <strong>Big Sister:</strong> Sue
+                                                Shuemaker <br>
+                                                <strong>Future: </strong>To become
+                                                a social worker and hopefully
+                          help as many people as I can. </font></font><font face="Bookman">&nbsp;</font></p>
+                          <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Brianna Akins</font></b></font><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font face="Bookman"><br>
+                        <br>
+                        Philanthropy and VP of Public Relations <br>
+                        </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >Rum5288@cup.edu</a><br>
+                        <b><br>
+                        <img src="http://sai.cup.edu/asa/new pics/n72405975_31115858_3398.jpg" width="164" height="193" border="2" align="left"></b><strong>Hometown: </strong>Pittsburgh,
+                            PA <br>
+                          <strong>Major:</strong> Social
+                            Work <br>
+                          <strong>Year in College:</strong> Freshman <br>
+                          <strong>Birthday:</strong> February
+                            24th<br>
+                          <strong>Nickname:</strong> Cupcake <br>
+                          <strong>Favorite Quote/Saying:</strong> Learn
+                            from the past, live in the present,
+                            dream of the future<br>
+                          <strong>Semester Initiated:</strong> Spring
+                            2003 <br>
+                          <strong>Big Sister:</strong> Sue
+                            Shuemaker <br>
+                          <strong>Future: </strong>To become
+                            a social worker and hopefully
+                            help as many people as I can. </font></font><font face="Bookman">&nbsp;</font></p>
+                        <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Kelly Policicchio </font><font face="Bookman"><br>
+                                <br>
+                                Philanthropy and VP of Public Relations <br>
+                                                </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >Rum5288@cup.edu</a><br>
+                                                <b><br>
+                                                <img src="http://sai.cup.edu/asa/new pics/n72402938_30877507_2139.jpg" width="166" height="167" border="2" align="left"></b><strong>Hometown: </strong>Pittsburgh,
+                                                PA <br>
+                                                <strong>Major:</strong> Social
+                                                Work <br>
+                                                <strong>Year in College:</strong> Freshman <br>
+                                                <strong>Birthday:</strong> February
+                                                24th<br>
+                                                <strong>Nickname:</strong> Cupcake <br>
+                                                <strong>Favorite Quote/Saying:</strong> Learn
+                                                from the past, live in the present,
+                                                dream of the future<br>
+                                                <strong>Semester Initiated:</strong> Spring
+                                                2003 <br>
+                                                <strong>Big Sister:</strong> Sue
+                                                Shuemaker <br>
+                                                <strong>Future: </strong>To become
+                                                a social worker and hopefully
+                          help as many people as I can. </font></font><font face="Bookman">&nbsp;</font></p>
+                          <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Jenna Brothers</font></b></font><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font face="Bookman"><br>
+                        <br>
+                        Philanthropy and VP of Public Relations <br>
+                        </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >Rum5288@cup.edu</a><br>
+                        <b><br>
+                        <img src="http://sai.cup.edu/asa/new pics/n72401431_30538948_9578.jpg" width="164" height="188" border="2" align="left"></b><strong>Hometown: </strong>Pittsburgh,
+                            PA <br>
+                          <strong>Major:</strong> Social
+                            Work <br>
+                          <strong>Year in College:</strong> Freshman <br>
+                          <strong>Birthday:</strong> February
+                            24th<br>
+                          <strong>Nickname:</strong> Cupcake <br>
+                          <strong>Favorite Quote/Saying:</strong> Learn
+                            from the past, live in the present,
+                            dream of the future<br>
+                          <strong>Semester Initiated:</strong> Spring
+                            2003 <br>
+                          <strong>Big Sister:</strong> Sue
+                            Shuemaker <br>
+                          <strong>Future: </strong>To become
+                            a social worker and hopefully
+                            help as many people as I can. </font></font><font face="Bookman">&nbsp;</font></p>
+                        <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Chelsea Faye Matthews </font><font face="Bookman"><br>
+                                <br>
+                                Philanthropy and VP of Public Relations <br>
+                                                </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >Rum5288@cup.edu</a><br>
+                                                <b><br>
+                                                <img src="http://sai.cup.edu/asa/new pics/n72400060_30847613_6133.jpg" width="166" height="167" border="2" align="left"></b><strong>Hometown: </strong>Pittsburgh,
+                                                PA <br>
+                                                <strong>Major:</strong> Social
+                                                Work <br>
+                                                <strong>Year in College:</strong> Freshman <br>
+                                                <strong>Birthday:</strong> February
+                                                24th<br>
+                                                <strong>Nickname:</strong> Cupcake <br>
+                                                <strong>Favorite Quote/Saying:</strong> Learn
+                                                from the past, live in the present,
+                                                dream of the future<br>
+                                                <strong>Semester Initiated:</strong> Spring
+                                                2003 <br>
+                                                <strong>Big Sister:</strong> Sue
+                                                Shuemaker <br>
+                                                <strong>Future: </strong>To become
+                                                a social worker and hopefully
+                          help as many people as I can. </font></font><font face="Bookman">&nbsp;</font></p>
+                          <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Courtney Franks </font><font face="Bookman"><br>
+                                <br>
+                                Philanthropy and VP of Public Relations <br>
+                                                </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >Rum5288@cup.edu</a><br>
+                                                <b><br>
+                                                <img src="http://sai.cup.edu/asa/new pics/050.JPG" width="166" height="167" border="2" align="left"></b><strong>Hometown: </strong>Pittsburgh,
+                                                PA <br>
+                                                <strong>Major:</strong> Social
+                                                Work <br>
+                                                <strong>Year in College:</strong> Freshman <br>
+                                                <strong>Birthday:</strong> February
+                                                24th<br>
+                                                <strong>Nickname:</strong> Cupcake <br>
+                                                <strong>Favorite Quote/Saying:</strong> Learn
+                                                from the past, live in the present,
+                                                dream of the future<br>
+                                                <strong>Semester Initiated:</strong> Spring
+                                                2003 <br>
+                                                <strong>Big Sister:</strong> Sue
+                                                Shuemaker <br>
+                                                <strong>Future: </strong>To become
+                                                a social worker and hopefully
+                          help as many people as I can. </font></font><font face="Bookman">&nbsp;</font></p>
+                          <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font size="3" face="Bookman">Leah Rager</font></b></font><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b><font face="Bookman"><br>
+                        <br>
+                        Philanthropy and VP of Public Relations <br>
+                        </font></b> <font face="Bookman"><a href="mailto:Run5288@cup.edu" >Rum5288@cup.edu</a><br>
+                        <b><br>
+                        <img src="http://sai.cup.edu/asa/new pics/006.JPG" width="166" height="167" border="2" align="left"></b><strong>Hometown: </strong>Pittsburgh,
+                            PA <br>
+                          <strong>Major:</strong> Social
+                            Work <br>
+                          <strong>Year in College:</strong> Freshman <br>
+                          <strong>Birthday:</strong> February
+                            24th<br>
+                          <strong>Nickname:</strong> Cupcake <br>
+                          <strong>Favorite Quote/Saying:</strong> Learn
+                            from the past, live in the present,
+                            dream of the future<br>
+                          <strong>Semester Initiated:</strong> Spring
+                            2003 <br>
+                          <strong>Big Sister:</strong> Sue
+                            Shuemaker <br>
+                          <strong>Future: </strong>To become
+                            a social worker and hopefully
+                            help as many people as I can. </font></font><font face="Bookman">&nbsp;</font></p>
+                        <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p>&nbsp;</p>
+                          <p>&nbsp;</p>                      </td>
+                    </tr><tr>
+                      <td><p>&nbsp;</p>
+                          <p>&nbsp;</p>                      </td>
+                    </tr>
+                  </table>
+              </div>            </td>
+            <td></td>
+          </tr>
+        </table>
+		<p></p>
+	</body>
+
+</html>
