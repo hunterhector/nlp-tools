@@ -13,7 +13,7 @@ outputDir = args[2]
 
 for resultFile in os.listdir(inputDir):
 	print "processing",resultFile
-	r = open(resultFile)
+	r = open(inputDir+"/"+resultFile)
 	root = et.fromstring(r.read())
 
 	if not os.path.exists(outputDir):
