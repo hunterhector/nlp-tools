@@ -1,0 +1,123 @@
+!--...--
+!DOCTYPE
+a res
+abbr res
+acronym
+address res
+applet
+area
+article res
+aside
+audio
+b res
+base
+basefont
+bdo
+big
+blockquote block
+body res nl
+br res
+button
+canvas
+caption res
+center res
+cite res
+code
+col res
+colgroup
+command
+datalist res
+dd res
+del
+details res
+dfn res
+dir
+div block
+dl block
+dt res
+em res
+embed
+fieldset block
+figcaption
+figure
+font res
+footer
+form block
+frame res
+frameset
+h1 block
+h2 block
+h3 block
+h4 block
+h5 block
+h6 block
+head res
+header res
+hgroup res
+hr
+html res
+i res
+iframe res
+img
+input
+ins res
+keygen
+kbd
+label
+layer res
+legend res
+li res
+link
+map
+mark res
+menu res
+meta res
+meter
+nav
+noframes
+noscript
+object
+ol block
+optgroup
+option
+output
+p res
+param
+pre block
+progress
+q
+rp
+rt
+ruby
+s
+samp
+script
+section
+select
+small res
+source
+span res
+strike
+strong res
+style
+sub
+summary res
+sup
+table block
+tbody res
+td res
+textarea res
+tfoot res
+th res
+thead res
+time res
+title res
+tr res
+tt
+u
+ul res
+var
+video
+wbr
+xmp
+nobr
