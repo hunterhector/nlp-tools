@@ -1,4 +1,4 @@
 nlp-tools
 =========
 
-Test some nlp toolkits
+This repository tested some tools in each step of a typical NLP tools pipeline.
